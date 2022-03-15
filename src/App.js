@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
+
+
+
 function App() {
+  const friends = [
+    { name: 'Readul Islam', aim:'MERN Stack Developer'},
+    { name: 'Jubyer Ahamed', aim:'MERN Stack Developer'}
+  ];
+  const nayoks = ['Rajib', 'Salman', 'Sakib Khan'];
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     { 
+      friends.map(friend => <Country name = {friend.name} aim = {friend.aim}></Country>)
+     }
+     { 
+     nayoks.map(nayok => <Actor name = {nayok}></Actor>)
+     }
+    </div>
+  )
+};
+
+function Country(props) {
+  console.log(props);
+  return(
+    <div className="country">
+      
+      <h1>{props.name}</h1>
+      <h4>{props.aim}</h4>
     </div>
   );
+}
+function Actor(props){
+  return(
+    
+    <div className="country">
+      <h1>{props.name}</h1>
+      </div>
+    
+  )
 }
 
 export default App;

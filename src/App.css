@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.country{
+  background-color:rgb(12, 170, 149) ;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius:50px;
+}
